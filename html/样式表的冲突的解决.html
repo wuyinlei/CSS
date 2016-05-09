@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="../css/b.css" />
+		<link rel="stylesheet" type="text/css" href="../css/c.css" />
+		<title>样式表的冲突的解决</title>
+		<style type="text/css">
+			/**
+		 * 1、行级  >  内部  >  外部样式表
+		 * 2、ID   >   类      >   标签选择器
+		 * 		外部样式表中的ID  >    内部样式表的标签选择器
+		 * 
+		 * 		原则：就近原则
+		 */
+			
+			div {
+				color: blue;
+			}
+			
+			.one {
+				color: yellow;
+			}
+			
+			.two {
+				color: red;
+				border: 1px solid red;
+			}
+			
+			#two {
+				color: green;
+			}
+			
+			p {
+				color: green;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="one" id="two">你好啊,我不太好</div>
+	</body>
+
+	<p id="p" style="color: aqua;">哈哈哈哈哈哈哈哈哈哈</p>
+
+	<h1 class="one">我是标题栏</h1>
+
+	<!--
+	作者：wuyinlei1118@126.com
+	时间：2016-05-09
+	描述：根据选择器的位置，在结合就近原则，然后 
+	外部样式表中的ID  >    内部样式表的标签选择器
+	1、行级  >  内部  >  外部样式表
+		 * 2、ID   >   类      >   标签选择器
+-->
+	<h1 class="one two">我是标题栏</h1>
+
+</html>
