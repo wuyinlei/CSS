@@ -1,0 +1,6 @@
+div{
+	width: 600px;
+	height: 600px;
+	border: 7px dotted dodgerblue;
+	background-image: url(../img/bg.jpg);
+}
